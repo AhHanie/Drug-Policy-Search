@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <DrugPolicySearch.LoadingLabel>Connect network</DrugPolicySearch.LoadingLabel>
+    <DrugPolicySearch.NoMatches>No drugs match "{0}"</DrugPolicySearch.NoMatches>
+</LanguageData>
