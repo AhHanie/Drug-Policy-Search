@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Drug Policy Search</AssemblyName>
+    <RootNamespace>Drug_Policy_Search</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <Deterministic>true</Deterministic>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>false</Optimize>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <!-- Pass these as environment variables or MSBuild properties (-p:RimWorldDir=...); nothing machine-specific is committed. -->
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(RimWorldDir)\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityStubs">
+      <HintPath>$(RimWorldDir)\UnityStubs.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(HarmonyDll)</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <Target Name="ValidateReferencePaths" BeforeTargets="ResolveAssemblyReferences;CoreCompile">
+    <Error Condition=" '$(RimWorldDir)' == '' " Text="Set the RimWorldDir property or environment variable to your RimWorld 1.7 install folder (the one containing Assembly-CSharp.dll)." />
+    <Error Condition=" '$(RimWorldDir)' != '' And !Exists('$(RimWorldDir)\Assembly-CSharp.dll') " Text="Assembly-CSharp.dll was not found at '$(RimWorldDir)\Assembly-CSharp.dll'. Check RimWorldDir." />
+    <Error Condition=" '$(RimWorldDir)' != '' And !Exists('$(RimWorldDir)\UnityStubs.dll') " Text="UnityStubs.dll was not found at '$(RimWorldDir)\UnityStubs.dll'. Check RimWorldDir." />
+    <Error Condition=" '$(HarmonyDll)' == '' " Text="Set the HarmonyDll property or environment variable to the RimWorld 1.7 (Harmony 3) 0Harmony.dll path." />
+    <Error Condition=" '$(HarmonyDll)' != '' And !Exists('$(HarmonyDll)') " Text="0Harmony.dll was not found at '$(HarmonyDll)'. Check HarmonyDll." />
+  </Target>
+</Project>

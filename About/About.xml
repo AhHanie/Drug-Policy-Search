@@ -5,9 +5,10 @@
     <packageId>sk.drugpolicysearch</packageId>
     <supportedVersions>
         <li>1.6</li>
+        <li>1.7</li>
     </supportedVersions>
     <description>Adds a search bar to the drug policy menu.</description>
-    <modVersion>1.0</modVersion>
+    <modVersion>1.1.0</modVersion>
     <url>https://steamcommunity.com/sharedfiles/filedetails/?id=3693258313</url>
     <modDependencies>
         <li>
