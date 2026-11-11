@@ -2,4 +2,20 @@
 <LanguageData>
     <DrugPolicySearch.LoadingLabel>Connect network</DrugPolicySearch.LoadingLabel>
     <DrugPolicySearch.NoMatches>No drugs match "{0}"</DrugPolicySearch.NoMatches>
+    <DrugPolicySearch.NoFilterMatches>No drugs match the current filters</DrugPolicySearch.NoFilterMatches>
+    <DrugPolicySearch.All>All</DrugPolicySearch.All>
+    <DrugPolicySearch.Use>Use</DrugPolicySearch.Use>
+    <DrugPolicySearch.Tech>Tech</DrugPolicySearch.Tech>
+    <DrugPolicySearch.Category>Category</DrugPolicySearch.Category>
+    <DrugPolicySearch.UseDrink>Drink</DrugPolicySearch.UseDrink>
+    <DrugPolicySearch.UseSmoke>Smoke</DrugPolicySearch.UseSmoke>
+    <DrugPolicySearch.UseInject>Inject</DrugPolicySearch.UseInject>
+    <DrugPolicySearch.UseSnort>Snort</DrugPolicySearch.UseSnort>
+    <DrugPolicySearch.UsePill>Pill / take</DrugPolicySearch.UsePill>
+    <DrugPolicySearch.UseEat>Eat</DrugPolicySearch.UseEat>
+    <DrugPolicySearch.UseOther>Other / unspecified</DrugPolicySearch.UseOther>
+    <DrugPolicySearch.Unspecified>Unspecified</DrugPolicySearch.Unspecified>
+    <DrugPolicySearch.UseTooltip>Use method (inferred from ingestion sound, or food type when there is no sound). Modded drugs with unknown sounds appear under Other. Some Anomaly serums use a pill sound despite descriptions that call them injections.</DrugPolicySearch.UseTooltip>
+    <DrugPolicySearch.TechTooltip>Filter by the drug item's declared tech level. Unspecified means no tech level is declared.</DrugPolicySearch.TechTooltip>
+    <DrugPolicySearch.CategoryTooltip>Filter by the drug item's category.</DrugPolicySearch.CategoryTooltip>
 </LanguageData>
